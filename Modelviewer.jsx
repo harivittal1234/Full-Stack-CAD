@@ -9,6 +9,8 @@ function Model({ url }) {
   const geometry = useLoader(loader, url);
   const meshRef = useRef();
 
+   geometry.center();
+  
   return (
     <mesh ref={meshRef} geometry={geometry}>
       <meshPhongMaterial color="#808080" />
